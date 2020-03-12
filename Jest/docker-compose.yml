@@ -1,0 +1,13 @@
+version: "2"
+
+services:
+  tool:
+    image: docker-registry.gray.net/common/node-devtools:12.7.0
+    command: ["npm", "run", "test"]
+    user: node
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/data
+    working_dir: /data

@@ -1,0 +1,1 @@
+FROM docker-registry.gray.net/common/node-devtools:10
